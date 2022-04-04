@@ -48,8 +48,8 @@ for i in range(1, len(mas_processes[3])):
         max_memory = float(mas_processes[3][i])
         max_memory_process = mas_processes[10][i]
 
-print(f"Всего памяти используется: {memory}%")
-file.write(f"Всего памяти используется: {memory}%\n")
+print(f"Всего памяти используется: {int(memory)}%")
+file.write(f"Всего памяти используется: {int(memory)}%\n")
 
 cpu = 0.0
 max_cpu = 0.0
@@ -59,14 +59,14 @@ for i in range(1, len(mas_processes[2])):
     if max_cpu <= float(mas_processes[3][i]):
         max_cpu = float(mas_processes[3][i])
         max_cpu_process = mas_processes[10][i]
-print(f"Всего CPU используется: {cpu}%")
-file.write(f"Всего CPU используется: {cpu}%\n")
+print(f"Всего CPU используется: {int(cpu)}%")
+file.write(f"Всего CPU используется: {int(cpu)}%\n")
 
-print(f"Больше всего памяти использует: {max_memory}% {max_memory_process[:20]}")
-file.write(f"Больше всего памяти использует: {max_memory}% {max_memory_process[:20]}\n")
+print(f"Больше всего памяти использует: {int(max_memory)}% {max_memory_process[:20]}")
+file.write(f"Больше всего памяти использует: {int(max_memory)}% {max_memory_process[:20]}\n")
 
-print(f"Больше всего CPU использует: {max_cpu}% {max_cpu_process[:20]}")
-file.write(f"Больше всего CPU использует: {max_cpu}% {max_cpu_process[:20]}")
+print(f"Больше всего CPU использует: {int(max_cpu)}% {max_cpu_process[:20]}")
+file.write(f"Больше всего CPU использует: {int(max_cpu)}% {max_cpu_process[:20]}")
 
 file.close()
 file_err.close()
